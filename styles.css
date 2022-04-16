@@ -14,11 +14,10 @@ h1 {
     padding: 0;
 }
 
-.main-grid>div {
-    display: flex;
-    flex: 1 1 31.25px;
-}
 
-.change-color {
-    background-color: rgb(29, 252, 0);
+
+.style {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
