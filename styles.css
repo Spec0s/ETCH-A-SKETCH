@@ -13,11 +13,3 @@ h1 {
     margin: 0;
     padding: 0;
 }
-
-
-
-.style {
-    display: flex;
-    flex-grow: 1;
-    flex-shrink: 1;
-}

@@ -1,6 +1,9 @@
 
 //                      Variables                           //
 var x = 256;
+var squareOpacity = 0;
+//                  increment opacity                       //
+
 
 
 //                  Reset button + add grid number          //
@@ -21,12 +24,18 @@ gridReset.addEventListener('click', function () {
 
     squareNaming.forEach(function (el) {
         el = document.createElement("div");
-        el.style.flexBasis = boxSize;
+        el.style.flexBasis += boxSize;
+        el.style.opacity += "0";
         mainGrid.appendChild(el);
     });
+
     var class1 = document.querySelectorAll(".main-grid>div");
+
+
     class1.forEach(className => className.addEventListener("mouseover", function (e) {
-        e.target.style.cssText += "background-color: green;"
+        var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        e.target.style.backgroundColor = "#" + randomColor;
+        e.target.style.opacity = Number(e.target.style.opacity) + 0.1;
     }));
 })
 
@@ -40,15 +49,19 @@ for (var i = 1; i <= x; i++) {
 
 squareNaming.forEach(function (el) {
     el = document.createElement("div");
-    el.style.flexBasis = "31.25px";
+    el.style.flexBasis += "31.25px";
+    el.style.opacity = squareOpacity;
     mainGrid.appendChild(el);
 });
 
 
 //                      Change color on mouse over              //
+
 var className = document.querySelectorAll(".main-grid>div");
 className.forEach(className => className.addEventListener("mouseover", function (e) {
-    e.target.style.cssText += "background-color: green;"
+    var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    e.target.style.backgroundColor = "#" + randomColor;
+    e.target.style.opacity = Number(e.target.style.opacity) + 0.1;
 }));
 
 
