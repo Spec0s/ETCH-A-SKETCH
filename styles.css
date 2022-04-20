@@ -1,5 +1,9 @@
-h1 {
-    color: blue;
+body{
+    text-align: center;
+}
+
+.title{
+    text-align: center;
 }
 
 .main-grid {
@@ -12,4 +16,17 @@ h1 {
     border-width: 1px;
     margin: 0;
     padding: 0;
+}
+
+.btn-pannel{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+
+}
+
+.top-div{
+    display:flex;
+    justify-content: center;
 }
